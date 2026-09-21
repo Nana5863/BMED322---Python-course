@@ -1,0 +1,20 @@
+{
+  "name": "Python Course",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      }
+    }
+  },
+  "postCreateCommand": "python -m ipykernel install --user --name python-course --display-name \"Python Course\"",
+  "forwardPorts": [8888]
+}
